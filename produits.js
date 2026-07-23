@@ -10,7 +10,7 @@ const produitsData = [
     genre: "femme",
     contenance: "100 ml",
     badge: "100 ml - Femme",
-    image: "images/duchesse-parfum-1.png",  // ← chemin corrigé
+    image: "images/duchesse-parfum-1.webp",  // ← chemin corrigé
     description: "Le parfum de la femme accomplie. Une composition chyprée moderne avec des notes de bergamote, de patchouli et d'ambre, créant une aura de confiance et de distinction.",
     ventePrivee: true,
     dateEvenement: "2026-08-08T14:00:00"
@@ -22,7 +22,7 @@ const produitsData = [
     genre: "femme",
     contenance: "100 ml",
     badge: "100 ml - Femme",
-    image: "images/duchesse-parfum-2.png",  // ← chemin corrigé
+    image: "images/duchesse-parfum-2.webp",  // ← chemin corrigé
     description: "Un classique intemporel qui incarne la force tranquille et le raffinement suprême dans sa version lavande poudré.",
     ventePrivee: true,
     dateEvenement: "2026-08-08T14:00:00"
@@ -34,7 +34,7 @@ const produitsData = [
     genre: "femme",
     contenance: "100 ml",
     badge: "100 ml - Femme",
-    image: "images/votre-image-rose.png",  // ← chemin corrigé
+    image: "images/votre-image-rose.webp",  // ← chemin corrigé
     description: "Un hommage intemporel à la reine des fleurs. Un parfum pur et élégant où la rose de Grasse se mêle à des accords de musc blanc et de bois de santal.",
     ventePrivee: true,
     dateEvenement: "2026-08-08T14:00:00"
@@ -46,7 +46,7 @@ const produitsData = [
     genre: "femme",
     contenance: "50 ml",
     badge: "50 ml - Femme",
-    image: "images/votre-image-passion.png",  // ← chemin corrigé
+    image: "images/votre-image-passion.webp",  // ← chemin corrigé
     description: "Incarnation de l'audace et du désir, Passion est une fragrance florale et épicée avec des notes de rose bulgare, de jasmin et une touche de poivre rose.",
     ventePrivee: true,
     dateEvenement: "2026-08-08T14:00:00"
@@ -58,7 +58,7 @@ const produitsData = [
     genre: "femme",
     contenance: "50 ml",
     badge: "50 ml - Femme",
-    image: "images/duchesse-parfum-4.png",  // ← chemin corrigé
+    image: "images/duchesse-parfum-4.webp",  // ← chemin corrigé
     description: "Une senteur froide et dominante, spécialement dédiée à l'élégance naturelle, affirmée et résolument moderne.",
     ventePrivee: true,
     dateEvenement: "2026-08-08T14:00:00"
@@ -70,7 +70,7 @@ const produitsData = [
     genre: "homme",
     contenance: "100 ml",
     badge: "100 ml - Homme",
-    image: "images/duchesse-parfum-5.png",  // ← chemin corrigé
+    image: "images/duchesse-parfum-5.webp",  // ← chemin corrigé
     description: "Un parfum envoûtant qui éveille les sens avec ses notes sucrées et réconfortantes de vanille, de caramel et de fruits rouges.",
     ventePrivee: true,
     dateEvenement: "2026-08-08T14:00:00"
@@ -82,7 +82,7 @@ const produitsData = [
     genre: "homme",
     contenance: "50 ml",
     badge: "50 ml - Homme",
-    image: "images/votre-image-envie.png",  // ← chemin corrigé
+    image: "images/votre-image-envie.webp",  // ← chemin corrigé
     description: "Une fragrance captivante, légèrement fruitée et racée, conçue sur mesure pour l'homme séducteur et audacieux.",
     ventePrivee: true,
     dateEvenement: "2026-08-08T14:00:00"
@@ -94,7 +94,7 @@ const produitsData = [
     genre: "homme",
     contenance: "50 ml",
     badge: "50 ml - Homme",
-    image: "images/duchesse-parfum-6.png",  // ← chemin corrigé
+    image: "images/duchesse-parfum-6.webp",  // ← chemin corrigé
     description: "Une fragrance texturée, mystérieuse et racée, idéale pour laisser un sillage marquant et inoubliable.",
     ventePrivee: true,
     dateEvenement: "2026-08-08T14:00:00"
