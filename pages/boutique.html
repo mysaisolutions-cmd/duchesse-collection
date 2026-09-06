@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boutique — Duchesse Collection</title>
+  <meta name="description"
+    content="Catalogue complet des parfums Duchesse Collection. Filtrez par genre, contenance et découvrez votre fragrance idéale.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../images/favicon.png" type="image/png">
+
+</head>
+
+<body>
+
+  <!-- Marquee Banner -->
+  <div class="marquee-banner">
+    <div class="marquee-content">
+      🎁 Vente Privée Exclusive de la collection unique le 8 août à 14h au Carrousel Monté Ekounou à Yaoundé, Cameroun
+      &nbsp;&bull;&nbsp; 📱 Commandez directement sur WhatsApp au 237 681280823 &nbsp;&bull;&nbsp; 🎁 Vente Privée
+      Exclusive de la collection unique le 8 août à 14h au Carrousel Monté Ekounou à Yaoundé, Cameroun
+      &nbsp;&bull;&nbsp; 📱 Commandez directement sur WhatsApp au 237 681280823 &nbsp;&bull;&nbsp;
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../index.html" class="logo">Duchesse <span>Collection</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="boutique.html" class="active">Boutique</a></li>
+        <li><a href="parfums-de-collection.html">Collection</a></li>
+        <li><a href="promotions.html">Vente Privée</a></li>
+        <li><a href="apropos.html">À Propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="nav-search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input type="text" placeholder="Rechercher...">
+        </div>
+        <button class="cart-btn" aria-label="Panier">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <path d="M16 10a4 4 0 01-8 0" />
+          </svg>
+          <span class="cart-count" style="display:none;">0</span>
+        </button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header Boutique -->
+  <section style="padding:80px 5% 40px;text-align:center;">
+    <div class="section-label">Catalogue</div>
+    <h1 class="section-title" style="font-size:clamp(2rem,4vw,3.5rem);">Notre <em>Boutique</em></h1>
+    <p class="section-desc" style="max-width:600px;margin:0 auto;">Explorez notre sélection de fragrances de prestige et
+      trouvez celle qui résonne avec votre essence.</p>
+  </section>
+
+  <!-- Filtres -->
+  <div class="filters-bar">
+    <div class="filters-inner">
+      <input type="text" id="filter-search" class="filter-input" placeholder="Rechercher un parfum...">
+      <select id="filter-categorie" class="filter-select">
+        <option value="">Toutes catégories</option>
+        <option value="parfums-de-collection">Collection Prestige</option>
+      </select>
+      <select id="filter-genre" class="filter-select">
+        <option value="">Tous genres</option>
+        <option value="femme">Femme</option>
+        <option value="homme">Homme</option>
+        <option value="mixte">Mixte</option>
+      </select>
+      <select id="filter-prix" class="filter-select">
+        <option value="">Toutes contenances</option>
+        <option value="50">50 ml</option>
+        <option value="100">100 ml</option>
+      </select>
+      <span class="results-count" id="results-count">6 résultat(s)</span>
+    </div>
+  </div>
+
+  <!-- Grille Produits -->
+  <section class="section" style="padding-top:40px;">
+    <div class="products-grid" id="boutique-grid"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">Duchesse <span>Collection</span></div>
+        <p>Parfumerie de prestige à Yaoundé. Des fragrances d'exception pour révéler votre personnalité unique.</p>
+        <div class="footer-socials">
+          <a href="https://web.facebook.com/profile.php?id=61592174523940" target="_blank" aria-label="Facebook"><svg
+              viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+            </svg></a>
+          <a href="https://www.instagram.com/duchessecollection/" target="_blank" aria-label="Instagram"><svg
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg></a>
+          <a href="https://wa.me/237681280823
+          " aria-label="WhatsApp" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Boutique</h4>
+        <ul>
+          <li><a href="boutique.html">Tous les Parfums</a></li>
+          <li><a href="parfums-de-collection.html">Collection Prestige</a></li>
+          <li><a href="promotions.html">Vente Privée</a></li>
+          <li><a href="boutique.html?genre=femme">Pour Elle</a></li>
+          <li><a href="boutique.html?genre=homme">Pour Lui</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Informations</h4>
+        <ul>
+          <li><a href="apropos.html">À Propos</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="livraison.html">Livraison</a></li>
+          <li><a href="cgv.html">CGV</a></li>
+          <li><a href="confidentialite.html">Confidentialité</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p style="font-size:0.9rem;margin-bottom:16px;">Recevez nos offres exclusives et invitations aux ventes privées.
+        </p>
+        <div class="footer-newsletter">
+          <input type="email" placeholder="Votre adresse email">
+          <button class="btn btn-primary btn-small" style="width:100%;">S'inscrire</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Duchesse Collection — Tous droits réservés. <a href="mentions-legales.html"
+          style="color:rgba(255,255,255,0.4);">Mentions légales</a></p>
+      <p style="margin: 0;">Créé par <a href="https://www.mys-ai-solutions.site/" target="_blank"
+          rel="noopener noreferrer" style="color: #fbbf24; text-decoration: none; font-weight: 500;">Mysaisolutions</a>
+      </p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Retour en haut">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="18 15 12 9 6 15" />
+    </svg>
+  </button>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h3>Votre Panier</h3>
+      <button class="cart-close" id="cart-close" aria-label="Fermer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <path d="M16 10a4 4 0 01-8 0" />
+        </svg>
+        <p>Votre panier est vide</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Total</span><span id="cart-total">0 FCFA</span></div>
+      <div class="cart-actions">
+        <button class="btn btn-whatsapp" style="width:100%;" onclick="sendWhatsAppOrder()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          Commander sur WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/produits.js?v=2"></script>
+  <script src="../js/script.js?v=2"></script>
+</body>
+
+</html>

@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -13,7 +13,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
 
@@ -35,11 +35,11 @@
       <a href="index.html" class="logo">Duchesse <span>Collection</span></a>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html" class="active">Accueil</a></li>
-        <li><a href="boutique.html">Boutique</a></li>
-        <li><a href="parfums-de-collection.html">Collection</a></li>
-        <li><a href="promotions.html">Vente Privée</a></li>
-        <li><a href="apropos.html">À Propos</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="pages/boutique.html">Boutique</a></li>
+        <li><a href="pages/parfums-de-collection.html">Collection</a></li>
+        <li><a href="pages/promotions.html">Vente Privée</a></li>
+        <li><a href="pages/apropos.html">À Propos</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
       </ul>
       <div class="nav-actions">
         <div class="nav-search">
@@ -48,7 +48,7 @@
             <line x1="21" y1="21" x2="16.65" y2="16.65" />
           </svg>
           <input type="text" placeholder="Rechercher..."
-            onkeyup="if(event.key==='Enter'){window.location.href='boutique.html?search='+this.value}">
+            onkeyup="if(event.key==='Enter'){window.location.href='pages/boutique.html?search='+this.value}">
         </div>
         <button class="cart-btn" aria-label="Panier">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -78,7 +78,7 @@
         <p class="hero-desc">Découvrez notre collection unique de fragrances rares et d'exception. Des parfums d'une
           signature incomparable, pensés pour révéler toute votre élégance lors de notre Vente Privée exclusive.</p>
         <div class="hero-buttons">
-          <a href="boutique.html" class="btn btn-primary">Découvrir la Collection</a>
+          <a href="pages/boutique.html" class="btn btn-primary">Découvrir la Collection</a>
           <a href="https://wa.me/237681280823" class="btn btn-whatsapp" target="_blank">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
               <path
@@ -170,7 +170,7 @@
       <p class="section-desc">Des fragrances pensées pour chaque personnalité et chaque occasion.</p>
     </div>
     <div class="categories-grid">
-      <a href="parfums-de-collection.html?genre=femme" class="category-card">
+      <a href="pages/parfums-de-collection.html?genre=femme" class="category-card">
         <img src="images/votre-image-femme.webp" alt="Pour Elle">
         <div class="category-overlay">
           <h3>Pour Elle</h3>
@@ -178,7 +178,7 @@
           <span class="category-link">Découvrir →</span>
         </div>
       </a>
-      <a href="parfums-de-collection.html?genre=homme" class="category-card">
+      <a href="pages/parfums-de-collection.html?genre=homme" class="category-card">
         <img src="images/votre-image-homme.webp" alt="Pour Lui">
         <div class="category-overlay">
           <h3>Pour Lui</h3>
@@ -187,7 +187,7 @@
           <span class="category-link">Découvrir →</span>
         </div>
       </a>
-      <a href="promotions.html" class="category-card">
+      <a href="pages/promotions.html" class="category-card">
         <img src="images/votre-image-vente-privee.webp" alt="Vente Privée">
         <div class="category-overlay">
           <h3>Vente Privée</h3>
@@ -208,7 +208,7 @@
     </div>
     <div class="products-grid" id="bestsellers-grid"></div>
     <div style="text-align:center;margin-top:40px;">
-      <a href="boutique.html" class="btn btn-outline">Voir Tous les Parfums</a>
+      <a href="pages/boutique.html" class="btn btn-outline">Voir Tous les Parfums</a>
     </div>
   </section>
 
@@ -235,7 +235,7 @@
         <div class="countdown-unit">Secondes</div>
       </div>
     </div>
-    <a href="promotions.html" class="btn btn-primary">Découvrir l'Événement</a>
+    <a href="pages/promotions.html" class="btn btn-primary">Découvrir l'Événement</a>
   </section>
 
   <!-- Nouveautés -->
@@ -381,11 +381,12 @@
         <div class="logo">Duchesse <span>Collection</span></div>
         <p>Parfumerie de prestige à Yaoundé. Des fragrances d'exception pour révéler votre personnalité unique.</p>
         <div class="footer-socials">
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor">
+          <a href="https://web.facebook.com/profile.php?id=61592174523940" target="_blank" aria-label="Facebook"><svg
+              viewBox="0 0 24 24" fill="currentColor">
               <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
             </svg></a>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2">
+          <a href="https://www.instagram.com/duchessecollection/" target="_blank" aria-label="Instagram"><svg
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
               <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
               <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
@@ -400,21 +401,21 @@
       <div class="footer-col">
         <h4>Boutique</h4>
         <ul>
-          <li><a href="boutique.html">Tous les Parfums</a></li>
-          <li><a href="parfums-de-collection.html">Collection Prestige</a></li>
-          <li><a href="promotions.html">Vente Privée</a></li>
-          <li><a href="boutique.html?genre=femme">Pour Elle</a></li>
-          <li><a href="boutique.html?genre=homme">Pour Lui</a></li>
+          <li><a href="pages/boutique.html">Tous les Parfums</a></li>
+          <li><a href="pages/parfums-de-collection.html">Collection Prestige</a></li>
+          <li><a href="pages/promotions.html">Vente Privée</a></li>
+          <li><a href="pages/boutique.html?genre=femme">Pour Elle</a></li>
+          <li><a href="pages/boutique.html?genre=homme">Pour Lui</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Informations</h4>
         <ul>
-          <li><a href="apropos.html">À Propos</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="livraison.html">Livraison</a></li>
-          <li><a href="cgv.html">CGV</a></li>
-          <li><a href="confidentialite.html">Confidentialité</a></li>
+          <li><a href="pages/apropos.html">À Propos</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+          <li><a href="pages/livraison.html">Livraison</a></li>
+          <li><a href="pages/cgv.html">CGV</a></li>
+          <li><a href="pages/confidentialite.html">Confidentialité</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -427,10 +428,12 @@
         </div>
       </div>
     </div>
-    <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-      <p>© 2026 Duchesse Collection — Tous droits réservés. <a href="mentions-legales.html"
+    <div class="footer-bottom"
+      style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+      <p>© 2026 Duchesse Collection — Tous droits réservés. <a href="pages/mentions-legales.html"
           style="color:rgba(255,255,255,0.4);">Mentions légales</a></p>
-      <p style="margin: 0;">Créé par <a href="https://mysaisolutions.com" target="_blank" rel="noopener noreferrer" style="color: #fbbf24; text-decoration: none; font-weight: 500;">Mysaisolutions</a></p>
+      <p style="margin: 0;">Créé par <a href="https://www.mys-ai-solutions.site/" target="_blank" rel="noopener noreferrer"
+          style="color: #fbbf24; text-decoration: none; font-weight: 500;">Mysaisolutions</a></p>
     </div>
   </footer>
 
@@ -477,8 +480,8 @@
     </div>
   </div>
 
-  <script src="produits.js?v=2"></script>
-  <script src="script.js?v=2"></script>
+  <script src="js/produits.js?v=2"></script>
+  <script src="js/script.js?v=2"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       renderProducts('bestsellers-grid', (p, i) => i < 3, true);
@@ -487,4 +490,4 @@
   </script>
 </body>
 
-</html>       
+</html>
