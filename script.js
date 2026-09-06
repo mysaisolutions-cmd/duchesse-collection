@@ -57,24 +57,34 @@ function renderCartItems() {
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
         <p>Votre panier est vide</p>
       </div>`;
-    document.getElementById('cart-total').textContent = '0 FCFA';
+    const totalEl = document.getElementById('cart-total');
+    if (totalEl) totalEl.textContent = '0 FCFA';
     return;
   }
 
-  container.innerHTML = cart.map(item => `
-    <div class="cart-item">
-      <div class="cart-item-img">
-        <img src="${item.image}" alt="${item.nom}">
-      </div>
-      <div class="cart-item-info">
-        <div class="cart-item-name">${item.nom}</div>
-        <div class="cart-item-detail">${item.badge} &bull; Qty: ${item.qty || 1}</div>
-        <button class="cart-item-remove" data-remove-id="${item.id}">Retirer</button>
-      </div>
-    </div>
-  `).join('');
+  let totalAmount = 0;
+  container.innerHTML = cart.map(item => {
+    const itemPrice = item.prix || (findProduitById(item.id)?.prix) || 0;
+    const qty = item.qty || 1;
+    totalAmount += itemPrice * qty;
+    const priceStr = itemPrice ? `${itemPrice.toLocaleString('fr-FR')} FCFA` : '';
 
-  document.getElementById('cart-total').textContent = `${cart.length} article(s)`;
+    return `
+      <div class="cart-item">
+        <div class="cart-item-img">
+          <img src="${item.image}" alt="${item.nom}">
+        </div>
+        <div class="cart-item-info">
+          <div class="cart-item-name">${item.nom}</div>
+          <div class="cart-item-detail">${item.badge} ${priceStr ? '&bull; ' + priceStr : ''} &bull; Qty: ${qty}</div>
+          <button class="cart-item-remove" data-remove-id="${item.id}">Retirer</button>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  const totalEl = document.getElementById('cart-total');
+  if (totalEl) totalEl.textContent = `${totalAmount.toLocaleString('fr-FR')} FCFA`;
 }
 
 function showCartSidebar() {
@@ -96,10 +106,22 @@ function sendWhatsAppOrder() {
 
   const phone = "237681280823";
   let message = "🌸 *Commande Duchesse Collection* 🌸\n\n";
+  let totalAmount = 0;
+
   cart.forEach((item, i) => {
-    message += `${i + 1}. ${item.nom} (${item.badge}) x${item.qty || 1}\n`;
+    const itemPrice = item.prix || (findProduitById(item.id)?.prix) || 0;
+    const qty = item.qty || 1;
+    const itemTotal = itemPrice * qty;
+    totalAmount += itemTotal;
+    const priceStr = itemPrice ? ` (${itemPrice.toLocaleString('fr-FR')} FCFA)` : '';
+
+    message += `${i + 1}. ${item.nom} (${item.badge})${priceStr} x${qty} = ${itemTotal.toLocaleString('fr-FR')} FCFA\n`;
   });
-  message += "\nMerci de me confirmer la disponibilité et les tarifs.";
+
+  if (totalAmount > 0) {
+    message += `\n*Total : ${totalAmount.toLocaleString('fr-FR')} FCFA*\n`;
+  }
+  message += "\nMerci de me confirmer la disponibilité et les modalités de livraison.";
 
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
   window.open(url, '_blank');
@@ -107,7 +129,9 @@ function sendWhatsAppOrder() {
 
 function sendWhatsAppSingle(product) {
   const phone = "237681280823";
-  const message = `Bonjour, je suis intéressé(e) par *${product.nom}* (${product.badge}).\n\nMerci de me donner plus d'informations.`;
+  const itemPrice = product.prix || (findProduitById(product.id)?.prix) || 0;
+  const priceStr = itemPrice ? ` au prix de *${itemPrice.toLocaleString('fr-FR')} FCFA*` : '';
+  const message = `Bonjour, je suis intéressé(e) par *${product.nom}* (${product.badge})${priceStr}.\n\nMerci de me donner plus d'informations pour passer commande.`;
   window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
 }
 
@@ -159,13 +183,11 @@ function updateCountdown() {
 
 // --- RENDU PRODUITS ---
 function renderProductCard(produit, showCountdown = false) {
-  const countdownHtml = produit.ventePrivee ? `
-    <div class="product-countdown" style="margin-bottom:12px;font-size:0.85rem;"></div>
-  ` : '';
+  const formattedPrice = produit.prix
+    ? `${produit.prix.toLocaleString('fr-FR')} FCFA`
+    : 'Sur demande';
 
-  const priceHtml = produit.ventePrivee && showCountdown
-    ? countdownHtml
-    : `<div class="product-price">Sur demande</div>`;
+  const priceHtml = `<div class="product-price">${formattedPrice}</div>`;
 
   return `
     <div class="product-card" data-id="${produit.id}" data-genre="${produit.genre}" data-contenance="${produit.contenance}">
